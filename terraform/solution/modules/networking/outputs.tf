@@ -1,6 +1,5 @@
 # Networking module outputs
 
-
 output "vpc_id" {
   description = "ID of the VPC."
   value       = aws_vpc.vpc.id
@@ -59,15 +58,4 @@ output "public_route_table_id" {
 output "availability_zones" {
   description = "List of availability zones used by subnets."
   value       = var.availability_zones
-}
-
-output "web_security_group_id" {
-  description = "ID of the web/application tier security group (for database ingress allowlist)."
-  value       = aws_security_group.web.id
-}
-
-# Alias for backward compatibility where database_sg_id was referenced for "allowed" SGs
-output "database_sg_id" {
-  description = "ID of the web tier SG (allowed to connect to database). Use web_security_group_id for clarity."
-  value       = aws_security_group.web.id
 }
