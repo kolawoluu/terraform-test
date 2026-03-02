@@ -6,6 +6,7 @@ Each environment (dev/prod) has its own small root configuration that calls the 
 backend examples live alongside them as commented templates (`providers.tf`, `backend.tf`), so you can copy them
 into place when ready to switch to real AWS credentials or a remote state bucket.
 
+```
 TERRAFORM_TEST/
 ├── .gitignore
 ├── README.md                      # this file
@@ -66,3 +67,4 @@ TERRAFORM_TEST/
 │           │   ├── versions.tf
 │           │   └── terraform.tfvars.json
 │           └── prod/              # same structure as dev, real deployments should use it too
+```
